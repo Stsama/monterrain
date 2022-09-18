@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', [PostController::class, 'index']);
+
+Route::get('/connexion', [PostController::class, 'inscription']);
+
+Route::get('/show-post', [PostController::class, 'show'])->whereNumber('id');
+
+Route::get('/inscription', [PostController::class, 'connexion']);
+
+Route::get('/contact', [PostController::class, 'contact']);
