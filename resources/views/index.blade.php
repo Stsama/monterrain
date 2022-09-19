@@ -95,7 +95,7 @@
     </div>
 </section><!-- services section Ends -->
 <!-- portfolio strats -->
-<section class="portfolio section-padding" id="portfolio">
+<section class="portfolio section-padding" id="offres">
     <div class="container">
         <div class="row">
             <div class="col-md-12">

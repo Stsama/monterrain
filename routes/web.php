@@ -18,12 +18,12 @@ use App\Http\Controllers\PostController;
 //     return view('welcome');
 // });
 
-Route::get('/', [PostController::class, 'index']);
+Route::get('/', [PostController::class, 'index'])->name('welcome');
 
-Route::get('/connexion', [PostController::class, 'connexion']);
+Route::get('/connexion', [PostController::class, 'connexion'])->name('connexion');
 
 Route::get('/show-post', [PostController::class, 'show'])->whereNumber('id');
 
-Route::get('/inscription', [PostController::class, 'inscription']);
+Route::get('/inscription', [PostController::class, 'inscription'])->name('inscription');
 
-Route::get('/contact', [PostController::class, 'contact']);
+Route::get('/contact', [PostController::class, 'contact'])->name('contact');
