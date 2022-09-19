@@ -34,4 +34,15 @@ class PostController extends Controller
     public function contact(){
         return view('contact');
     }
+    public function acheteurs(){
+        return view('acheteurs');
+    }
+    
+    public function vendeurs(){
+        return view('vendeurs');
+    }
+
+    public function domaines(){
+        return view('domaines');
+    }
 }

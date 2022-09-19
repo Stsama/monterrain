@@ -1,6 +1,6 @@
 @extends('layouts.app2')
 
-@section('content')
+@section('content2')
 
 <div class="container">
     <div class="row">
@@ -36,7 +36,7 @@
                         </div>
                     </div>
                 </form>
-                <p class="text-center mt-3 text-secondary">If you have account, Please <a href="#">Login Now</a></p>
+                <p class="text-center mt-3 text-secondary">If you have account, Please <a href="{{route('connexion')}} ">Login Now</a></p>
             </div>
         </div>
     </div>

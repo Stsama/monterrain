@@ -12,7 +12,6 @@
                 <h5>Acheter un bien immobilier</h5>
                 <p>Monterrain.com est une agence immobilière qui se concentre sur le marché immobilier togolais.
                     Grâce à un vaste réseau d'agents immobiliers locaux, nous sommes au courant de nombreuses opportunités intéressantes.</p>
-                <p><a class="btn btn-warning mt-3" href="#">Learn More</a></p>
             </div>
         </div>
         <div class="carousel-item">
@@ -20,15 +19,13 @@
             <div class="carousel-caption bann">
                 <h5>Vendez un bien immobilier</h5>
                 <p>Monterrain votre spécialiste de l'immobilier vous propose une sélection des plus beaux appartements et maisons à vendre</p>
-                <p><a class="btn btn-warning mt-3" href="#">Learn More</a></p>
             </div>
         </div>
         <div class="carousel-item">
             <img alt="..." class="d-block w-100" src="images/post-576729.png">
             <div class="carousel-caption bann">
                 <h5>Otennez tout les doduments administratifs</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, nulla, tempore. Deserunt excepturi quas vero.</p>
-                <p><a class="btn btn-warning mt-3" href="#">Learn More</a></p>
+                <p>Vous souhaitez obtenir les document de votre bien immobilier ? Notres équipe d'expert est à votre disposition </p>
             </div>
         </div>
     </div><button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleIndicators" type="button"><span aria-hidden="true" class="carousel-control-prev-icon"></span> <span class="visually-hidden">Previous</span></button> <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleIndicators" type="button"><span aria-hidden="true" class="carousel-control-next-icon"></span> <span class="visually-hidden">Next</span></button>

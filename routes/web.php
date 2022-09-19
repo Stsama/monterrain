@@ -27,3 +27,9 @@ Route::get('/show-post', [PostController::class, 'show'])->whereNumber('id');
 Route::get('/inscription', [PostController::class, 'inscription'])->name('inscription');
 
 Route::get('/contact', [PostController::class, 'contact'])->name('contact');
+
+Route::get('/vendeurs', [PostController::class, 'vendeurs'])->name('vendeurs');
+
+Route::get('/acheteurs', [PostController::class, 'acheteurs'])->name('acheteurs');
+
+Route::get('/domaines', [PostController::class, 'domaines'])->name('domaines');

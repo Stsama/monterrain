@@ -5,12 +5,13 @@
 body {
 	background: #f1fbff;
 }
+.adminn>a{
+	text-decoration: none;
+	color: inherit;
+}
 .section-padding {
 	padding: 100px 0;
 }
-/* .about-text{
-	margin-top: 10px;
-} */
 .carousel-item {
 	height: 100vh;
 	min-height: 320px;
@@ -32,7 +33,7 @@ body {
 	line-height: 1.9;
 }
 .bann{
-	padding-bottom: 100px;
+	padding-top: 50px;
 }
 .boutton{
 	text-align: center;
@@ -47,9 +48,6 @@ body {
 	left: 0;
 	background: rgba(0, 0, 0, 0.7);
 	z-index: 1;
-}
-.masker{
-	height: 70px;
 }
 .navbar .getstarted {
 	background: #106eea;
@@ -100,6 +98,11 @@ body {
     color: #ffc107 ;
 
 }
+.ajout{
+	text-align: end;
+	margin-right: 5%;
+	margin-top: 2%;
+}
 .merites{
 	width: 75%;
 	margin: auto;
@@ -131,35 +134,7 @@ body {
 .team .card-body i {
 	font-size: 20px;
 }
-/* page contact */
-contact-title{
-    margin-bottom: 40px;
-}
 
-
-.btn-send {
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    width: 100%;
-	margin-top: 20px;
-	background: #0d6efd;
-
-    }
-.help-block.with-errors {
-    color: #ff5050;
-    margin-top: 5px;
-
-}
-.maskerrrr{
-	height: 105px;
-}
-.carder{
-	margin-left: 10px;
-	margin-right: 10px;
-}
-
-/* page contact fin */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 	.carousel-caption {
@@ -242,7 +217,7 @@ aside{
 }
 .boutto div{
 	list-style: none;
-	background: rgba(0, 0, 0, 0.373);
+	background: rgba(0, 0, 0, 0.185);
 	margin: 5px 0;
 	padding: 10px;
 	font-size: larger;
@@ -275,7 +250,7 @@ table th{
 	text-align: center;
 }
 .ajout{
-	text-align: end;
+	
 	margin-right: 5%;
 	margin-top: 2%;
 }
