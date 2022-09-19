@@ -20,10 +20,10 @@ use App\Http\Controllers\PostController;
 
 Route::get('/', [PostController::class, 'index']);
 
-Route::get('/connexion', [PostController::class, 'inscription']);
+Route::get('/connexion', [PostController::class, 'connexion']);
 
 Route::get('/show-post', [PostController::class, 'show'])->whereNumber('id');
 
-Route::get('/inscription', [PostController::class, 'connexion']);
+Route::get('/inscription', [PostController::class, 'inscription']);
 
 Route::get('/contact', [PostController::class, 'contact']);
