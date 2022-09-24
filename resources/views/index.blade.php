@@ -24,8 +24,8 @@
         <div class="carousel-item">
             <img alt="..." class="d-block w-100" src="images/post-576729.png">
             <div class="carousel-caption bann">
-                <h5>Otennez tout les doduments administratifs</h5>
-                <p>Vous souhaitez obtenir les document de votre bien immobilier ? Notres équipe d'expert est à votre disposition </p>
+                <h5>Otennez tout les documents administratifs</h5>
+                <p>Vous souhaitez obtenir les document de votre bien immobilier ? Notre équipe d'experts est à votre disposition </p>
             </div>
         </div>
     </div><button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleIndicators" type="button"><span aria-hidden="true" class="carousel-control-prev-icon"></span> <span class="visually-hidden">Previous</span></button> <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleIndicators" type="button"><span aria-hidden="true" class="carousel-control-next-icon"></span> <span class="visually-hidden">Next</span></button>
@@ -137,7 +137,7 @@
                     </div>
                 </div>
             </div>
-            <div class="boutton"> <button class="btn bg-warning text-dark">Voir toutes les Offres</button></div>
+            <div class="boutton"> <button class="btn bg-warning text-dark"><a href="{{route('posts')}}" class="del">Voir toutes les Offres</a></button></div>
         </div>
     </div>
 </section><!-- portfolio ends -->

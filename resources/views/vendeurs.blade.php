@@ -10,7 +10,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="VendeurModalLabel">Ajouter un terrain</h5>
+                <h5 class="modal-title" id="VendeurModalLabel">Ajouter un Vendeur</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -56,18 +56,41 @@
         <input type="search" placeholder="Rechercher..." name="" id="search-bar">
         <button type="submit">Rechercher</button>
     </div>
-    <table>
-        <thead>                
-            <tr>
-                <th>Id</th>
-                <th>Nom</th>
-                <th>Prénom</th>
-                <th>Email</th>
-                <th>Téléphone</th>
-                <th>Id domaine</th>
-                <th>Actions</th>                 
-            </tr>
-        </thead>
-    </table>
+    <div class="table-cont">
+        <table>
+            <thead>                
+                <tr>
+                    <th>Id</th>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Email</th>
+                    <th>Téléphone</th>
+                    <th>Id domaine</th>
+                    <th>Actions</th>                 
+                </tr>
+            </thead>
+            <tbody>
+                {{-- @foreach ($users as $user)
+                    <tr>
+                        <td>{{$user->id}}</td>
+                        <td>{{$user->nom}}</td>
+                        <td>{{$user->prenom}}</td>
+                        <td>{{$user->telephone}}</td>
+                        <td>{{$user->demandes as $demande}}</td>
+
+                    </tr>
+                @endforeach --}}
+
+                {{-- @foreach ($users->demandes as $demande)
+                    <tr>
+                        {{$demande->nom}}
+                    </tr>
+                    
+                @endforeach
+                 --}}
+            </tbody>
+        </table>
+    </div>
+    
 </main>
 @endsection

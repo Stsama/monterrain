@@ -2,7 +2,7 @@
 
 @section('content3')
 <main>
-    <h2 class="text-center mt-3">liste des Acheteurs</h3>
+    <h2 class="text-center mt-3">liste des Inscrits</h3>
     <div class="ajout">
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AcheteurModal"><span><i class="fa-solid fa-circle-plus"></i></span>  Ajouter un acheteur</button>
 <div class="modal fade" id="AcheteurModal" tabindex="-1" aria-labelledby="AcheteurModalLabel" aria-hidden="true">
@@ -13,7 +13,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <form method="POST" action="#">
          <div class="row">
             <div class="col">
                 <label for="nom" class="col-form-label float-start">Nom:</label>
@@ -55,7 +55,8 @@
         <input type="search" placeholder="Rechercher..." name="" id="search-bar">
         <button type="submit">Rechercher</button>
     </div>
-    <table>
+    <div class="table-cont">
+      <table>
         <thead>                
             <tr>
               <th>Id</th>
@@ -63,10 +64,22 @@
               <th>Prénom</th>
               <th>Email</th>
               <th>Téléphone</th>
-              <th>Id domaine</th>
               <th>Actions</th>                   
             </tr>
         </thead>
+        <tbody>
+          @foreach ($users as $user)
+          <tr>
+            <td>{{$user->id}} </td>
+            <td>{{$user->nom}} </td>
+            <td>{{$user->prenom}} </td>
+            <td>{{$user->email}} </td>
+            <td>{{$user->telephone}} </td>                    
+            <td><span><button class="btn btn-danger">Supp</button></span></td>                    
+          </tr>
+          @endforeach
+        </tbody>
     </table>
+    </div>
 </main>
 @endsection

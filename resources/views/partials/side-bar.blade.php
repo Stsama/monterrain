@@ -62,8 +62,8 @@
         </div>
         </div>
         <div class="boutto">
-            <div class="adminn"><a href="{{route('acheteurs')}}"><span><i class="fa-solid fa-users"></i></span> Acheteurs</a></div>
-            <div class="adminn"><a href="{{route('vendeurs')}}"><span><i class="fa-solid fa-user-tie"></i></span> Vendeurs</a></div>
+            <div class="adminn"><a href="{{route('acheteurs')}}"><span><i class="fa-solid fa-users"></i></span> Inscrits</a></div>
+            <div class="adminn"><a href="{{route('vendeurs')}}"><span><i class="fa-solid fa-user-tie"></i></span> Demandes</a></div>
             <div class="adminn"><a href="{{route('domaines')}}"><span><i class="fa-solid fa-mountain-sun"></i></span>Domaines</a></div>
         </div>
     </div>

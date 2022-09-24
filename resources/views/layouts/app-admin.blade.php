@@ -8,10 +8,10 @@
 	<title>Brief projet simplon</title>
     <script src="https://kit.fontawesome.com/11a3697488.js" crossorigin="anonymous"></script>
 	<!-- All CSS -->
-	<link rel="stylesheet" href="assets/fontawesome-free-6.2.0-web/css/all.min.css">
+	<link rel="stylesheet" href="fontawesome-free-6.2.0-web/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    @vite(['resources/css/test.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body id="admine">
     @include('partials.side-bar')
