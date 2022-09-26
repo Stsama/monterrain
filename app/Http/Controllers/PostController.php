@@ -42,18 +42,50 @@ class PostController extends Controller
     }
 
     public function domaines(){
+
+        if(Session::has('loginId')){
+            $data = User::where('id','=',Session::get('loginId'))->first();
+        }
+        
+
         $domaines = Domaine::all();
-        return view('domaines',\compact('domaines'));
+        return view('domaines',\compact('domaines','data'));
     }
     public function AddDomaine(Request $request)
     {
-            
-        $requestData = $request->all();
-        $fileName = time().$request->file('image')->getClientOriginalName();
-        $path = $request->file('image')->storeAs('images', $fileName, 'public');
-        $requestData["image"] = 'storage/'.$path;
-        Domaine::create($requestData);
-        return redirect('domaines')->with('flash_message', 'Employee Addedd!');
+         $request->validate([
+            'region'=> 'required',
+            'ville'=> 'required',
+            'quartier'=> 'required',
+            'superficie'=> 'required',
+            'prix'=> 'required',
+            'proprio'=> 'required',
+            'description'=> 'required',
+            'image'=> 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048'
+         ]);
+        $file_name = time() . '.' . request()->image->getClientOriginalExtension();
+        request()->image->move(public_path('imagess'), $file_name);
+
+         $domaine = new Domaine();
+         $domaine->region = $request->region;
+         $domaine->ville = $request->ville;
+         $domaine->quartier = $request->quartier;
+         $domaine->superficie = $request->superficie;
+         $domaine->prix = $request->prix;
+         $domaine->proprio = $request->proprio;
+         $domaine->description = $request->description;
+         $domaine->image = $file_name;
+
+         $domaine->save();
+         
+        return redirect('domaines')->with('succes', 'Domaine Addedd!');
+
+        // $requestData = $request->all();
+        // $fileName = time().$request->file('image')->getClientOriginalName();
+        // $path = $request->file('image')->storeAs('images', $fileName, 'public');
+        // $requestData["image"] = 'storage/'.$path;
+        // Domaine::create($requestData);
+        // return redirect('domaines')->with('flash_message', 'Employee Addedd!');
 
     }
 

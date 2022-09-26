@@ -2,10 +2,11 @@
 
 @section('content3')
 <main>
+  <a href="logout" class="btn btn-primary">Deconnexion</a>
+
     <h2 class="text-center mt-3">liste des Domaines</h3>
     <div class="ajout">
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#DomaineModal"><span><i class="fa-solid fa-circle-plus"></i></span> ajouter</button>
-
 <div class="modal fade" id="DomaineModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">

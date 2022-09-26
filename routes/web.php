@@ -32,17 +32,17 @@ Route::post('/inscription-utlisateur', [Authentification::class, 'registerUser']
 
 Route::get('/contact', [PostController::class, 'contact'])->name('contact');
 
-Route::get('/utilisateurs', [PostController::class, 'users'])->name('utilisateurs');
+Route::get('/utilisateurs', [PostController::class, 'users'])->name('utilisateurs')->middleware('isLoggedIn');
 
 
-Route::get('/domaines', [PostController::class, 'domaines'])->name('domaines');
+Route::get('/domaines', [PostController::class, 'domaines'])->name('domaines')->middleware('isLoggedIn');
 
 Route::post('/domaines', [PostController::class, 'AddDomaine'])->name('AddDomaine');
 
 
 
 Route::get('/posts', [PostController::class, 'posts'])->name('posts');
-Route::get('/logout', [PostController::class, 'logout'])->name('logout');
+Route::get('/logout', [PostController::class, 'logout']);
 
 Route::get('/testeurs',function(){
     return User::with('demandes')->find(10);

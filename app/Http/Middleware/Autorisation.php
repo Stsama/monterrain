@@ -17,7 +17,7 @@ class Autorisation
     public function handle(Request $request, Closure $next)
     {
         if(!Session()->has('loginId')){
-            return redirect('auth.connexion')->with('fail','You have to login first');
+            return redirect('connexion')->with('fail','You have to login first');
         }
         return $next($request);
     }

@@ -61,4 +61,8 @@ class authentification extends Controller
         }
         return $next($request);
     }
+    
+    public function logout(){
+        
+    }
 }

@@ -10,7 +10,7 @@
             <img alt="..." class="d-block w-100" src="images/wheat-2391348_1280.jpg">
             <div class="carousel-caption bann">
                 <h5>Acheter un bien immobilier</h5>
-                <p>Monterrain.com est une agence immobilière qui se concentre sur le marché immobilier togolais.
+                <p>MonterrainTogo est une agence immobilière qui se concentre sur le marché immobilier togolais.
                     Grâce à un vaste réseau d'agents immobiliers locaux, nous sommes au courant de nombreuses opportunités intéressantes.</p>
             </div>
         </div>
