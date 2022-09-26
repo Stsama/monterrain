@@ -3,6 +3,7 @@
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\Authentification;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,24 +22,49 @@ use App\Http\Controllers\PostController;
 
 Route::get('/', [PostController::class, 'index'])->name('welcome');
 
-Route::get('/connexion', [PostController::class, 'connexion'])->name('connexion');
+Route::get('/connexion', [Authentification::class, 'connexion'])->name('connexion');
+Route::post('/connexion-utilisateur', [Authentification::class, 'loginUser'])->name('connexion-utilisateur');
 
 Route::get('/show-post/{id}', [PostController::class, 'show'])->name('show.post');
 
-Route::get('/inscription', [PostController::class, 'inscription'])->name('inscription');
+Route::get('/inscription', [Authentification::class, 'inscription'])->name('inscription');
+Route::post('/inscription-utlisateur', [Authentification::class, 'registerUser'])->name('inscription-utlisateur');
 
 Route::get('/contact', [PostController::class, 'contact'])->name('contact');
 
-Route::get('/vendeurs', [PostController::class, 'vendeurs'])->name('vendeurs');
+Route::get('/utilisateurs', [PostController::class, 'users'])->name('utilisateurs');
 
-Route::get('/acheteurs', [PostController::class, 'acheteurs'])->name('acheteurs');
 
 Route::get('/domaines', [PostController::class, 'domaines'])->name('domaines');
 
 Route::post('/domaines', [PostController::class, 'AddDomaine'])->name('AddDomaine');
 
+
+
 Route::get('/posts', [PostController::class, 'posts'])->name('posts');
+Route::get('/logout', [PostController::class, 'logout'])->name('logout');
 
 Route::get('/testeurs',function(){
     return User::with('demandes')->find(10);
 });
+
+Auth::routes();
+
+
+// pour le crud
+
+
+//afficher
+Route::get('/affiche/{id}', [PostController::class, 'afficher'])->name('afficher');
+
+// modifier
+Route::get('/edit-post/{id}', [PostController::class, 'editpost'])->name('post.edit');
+Route::post('/update-post/{id}', [PostController::class, 'updatepost'])->name('update.post');
+
+// suppression
+Route::get('/delete-post/{id}', [PostController::class, 'deletepost']);
+
+Route::get('/delete-user/{id}', [PostController::class, 'deleteuser']);
+
+
+

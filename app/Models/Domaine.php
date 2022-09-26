@@ -10,10 +10,6 @@ class Domaine extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['region','ville','quartier','superficie','prix','proprio','description'];
+    protected $fillable = ['region','ville','quartier','superficie','prix','proprio','description','image'];
 
-    public function users()
-     {
-        return $this->belongsToMany(User::class,'domaine_user');
-     }
 }

@@ -121,7 +121,7 @@
                         <div class="img-area mb-4"><img alt="" class="img-fluid" src="images/africa-6170631_1280.jpg"></div>
                         <h4 class="card-title">12 000 000 XOF</h4>
                         <p class="lead-one">1200 m²</p>
-                        <p class="lead"><span><i class="fa-solid fa-location-dot"></i></i></span> Kara, Tomdè, rue 202</p>
+                        <p class="lead"><span><i class="fa-solid fa-location-dot"></i></span> Kara, Tomdè, rue 202</p>
                         <button class="btn bg-warning text-dark">Learn More</button>
                     </div>
                 </div>
@@ -204,6 +204,59 @@
                 <div class="section-header text-center pb-5">
                     <h2>Contactez-nous</h2>
                     <p>Contactez-nous pour toutes vos préocupations liée à l'immobiler</p>
+                    <div class="row ">
+                        <div class="col-lg-7 mx-auto">
+                          <div class="carder mt-2 mx-auto p-4 bg-light">
+                              <div class="card-body bg-light">
+                         
+                              <div class = "container">
+                                               <form id="contact-form" role="form">
+                      
+                              <div class="controls">
+                      
+                                  <div class="row">
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                              <label for="form_name">Nom</label>
+                                              <input id="form_name" type="text" name="name" class="form-control" placeholder="Ex: John *" required="required" data-error="Firstname is required.">
+                                              
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                              <label for="form_lastname">Téléphone *</label>
+                                              <input id="form_lastname" type="tel" name="tel" class="form-control" placeholder="Ex: Doe *" required="required" data-error="Lastname is required.">
+                                                                              </div>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <div class="form-group">
+                                              <label for="form_message">Message *</label>
+                                              <textarea id="form_message" name="message" class="form-control" placeholder="Saisissez votre message" rows="4" required="required" data-error="Please, leave us a message."></textarea
+                                                  >
+                                              </div>
+                      
+                                          </div>
+                      
+                      
+                                      <div class="col-md-12">
+                                          
+                                          <input type="submit" class="btn btn-success btn-send  pt-2 btn-block
+                                              " value="Send Message" >
+                                      
+                                  </div>
+                            
+                                  </div>
+                      
+                      
+                          </div>
+                           </form>
+                          </div>
+                              </div>
+                      
+                      
+                      </div>
                 </div>
             </div>
         </div>

@@ -77,29 +77,19 @@
         <thead>                
             <tr>
               <th>#</th>
-              <th>Région</th>
-              <th>Ville</th>
-              <th>Quartier</th>
-              <th>superficie</th>
-              <th>Prix</th>
-              <th>Proprio</th>
+              <th>nom</th>
+              <th>email</th>
               <th>Actions</th>                 
             </tr>
         </thead>
         <tbody>
-            @foreach ($domaines as $domaine)
+            @foreach ($users as $user)
                 <tr>
-                  <td>{{$domaine->id}}</td>
-                  <td>{{$domaine->region}}</td>
-                  <td>{{$domaine->ville}}</td>
-                  <td>{{$domaine->quartier}}</td>
-                  <td>{{$domaine->superficie}}</td>
-                  <td>{{$domaine->prix}}</td>
-                  <td>{{$domaine->proprio}}</td>
+                  <td>{{$user->id}}</td>
+                  <td>{{$user->name}}</td>
+                  <td>{{$user->email}}</td>
                   <td>
-                    <a href="/affiche/{{$domaine->id}}"><button class="btn btn-info btn-sm" ><span><i class="fa-solid fa-eye"></i></span> Voir</button></a>
-                    <a href="/edit-post/{{$domaine->id}}"><button class="btn btn-primary btn-sm"><span><i class="fa-solid fa-pencil"></i></span>modif</button></a>
-                    <a href="/delete-post/{{$domaine->id}}"><button class="btn btn-danger btn-sm"><span><i class="fa-solid fa-xmark"></i></span> supp</button></a>
+                    <a href="/delete-user/{{$user->id}}"><button class="btn btn-danger btn-sm"><span><i class="fa-solid fa-xmark"></i></span> supp</button></a>
                   </td>
                 </tr>
             @endforeach

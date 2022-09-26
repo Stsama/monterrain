@@ -2,14 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Domaine;
-use App\Models\Demande;
 use App\Models\User;
+use App\Models\Demande;
+use App\Models\Domaine;
+use App\Models\Image;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Session;
+use DB;
 
 class PostController extends Controller
 {
     //
+
     public function index(){
         return view('index');
     }
@@ -19,13 +24,6 @@ class PostController extends Controller
         $request->validate([
 
         ]);
-
-        // User::create([
-        //     'nom'=> $request->nom,
-        //     'prenom' => $request->prenom,
-        //     // 'telephone' => $request->telephone,
-        //     'email' => $request->email,
-        // ]);
         return view('inscription');
     }
 
@@ -42,17 +40,6 @@ class PostController extends Controller
     public function contact(){
         return view('contact');
     }
-    public function acheteurs(){
-        $users = User::all();
-        // $users = User::with('domaines')->get();
-        return view('acheteurs',\compact('users'));
-    }
-    
-    public function vendeurs(){
-        // $users = User::with('demandes')->get();
-        // $users = User::all();
-        return view('vendeurs');
-    }
 
     public function domaines(){
         $domaines = Domaine::all();
@@ -60,29 +47,65 @@ class PostController extends Controller
     }
     public function AddDomaine(Request $request)
     {
-        // $post = new Domaine();
-        // $post->region = $request->region;
-        // $post->ville = $request->ville;
-        // $post->quartier = $request->quartier;
-        // $post->superficie = $request->superficie;
-        // $post->prix = $request->prix;
-        // $post->proprio = $request->proprio;
-        // $post->description = $request->description;
-        // $post->save();
-        Domaine::create([
-            'region'=> $request->region,
-            'ville' => $request->ville,
-            'quartier' => $request->quartier,
-            'superficie' => $request->superficie,
-            'prix' => $request->prix,
-            'proprio' => $request->proprio,
-            'description' => $request->description
-        ]);
-        dd('Dommaine ajouté avec succès');
+            
+        $requestData = $request->all();
+        $fileName = time().$request->file('image')->getClientOriginalName();
+        $path = $request->file('image')->storeAs('images', $fileName, 'public');
+        $requestData["image"] = 'storage/'.$path;
+        Domaine::create($requestData);
+        return redirect('domaines')->with('flash_message', 'Employee Addedd!');
+
     }
+
+
 
     public function posts(){
         $posts = Domaine::all();
         return view('posts',compact('posts'));
     }
+    public function logout(){
+        if(Session::has('loginId')){
+            Session::pull('loginId');
+            return redirect('connexion');
+        }
+    }
+
+    // pour le crud
+
+
+    public function afficher($id)
+    {
+        $domaine = Domaine::findorfail($id);
+        return view('affiche',\compact('domaine'));
+    }
+
+    public function editpost($id)
+    {
+        $domaine = Domaine::find($id);
+        return view('edit-post',\compact('domaine'));
+    }
+    public function updatepost(Request $request, $id)
+    {
+        $domaine = Domaine::find($id);
+        $input = $request->all();
+        $domaine->update($input);
+        return redirect('domaines')->with('flash_message', 'domaine Updated!');
+    }
+    public function deletepost($id)
+    {
+        Domaine::destroy($id);
+        return \back();
+    }
+    public function users ()
+    {
+        $users = User::all();
+        return view('utilisateurs',compact('users'));
+    }
+
+    public function deleteuser($id)
+    {
+        User::destroy($id);
+        return \back();
+    }
+    
 }

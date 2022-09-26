@@ -9,8 +9,5 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Demande extends Model
 {
     use HasFactory;
-    public function users()
-     {
-        return $this->belongsToMany(User::class,'demande_user');
-     }
+    
 }
